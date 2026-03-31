@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA JEWELRY | Timeless Elegance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;300;400;500&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfcfb;
+            color: #1a1a1a;
+        }
+
+        .serif-title {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.15em;
+        }
+
+        .gold-accent { color: #bfa37e; }
+        .bg-gold { background-color: #bfa37e; }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Image Fallback Style */
+        .img-fallback {
+            background-color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .product-card:hover .add-to-cart-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .add-to-cart-btn {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#1a1a1a] text-white text-center py-2 text-[10px] tracking-[0.2em] uppercase">
+        Complimentary Global Shipping on Orders Over $200
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-widest">
+                    <a href="#" class="hover:text-gold transition">Collections</a>
+                    <a href="#" class="hover:text-gold transition">High Jewelry</a>
+                </div>
+                
+                <div class="text-3xl serif-title font-bold gold-accent">AURA</div>
+
+                <div class="flex items-center space-x-6">
+                    <i class="fa-solid fa-magnifying-glass text-sm cursor-pointer"></i>
+                    <div class="relative cursor-pointer">
+                        <i class="fa-solid fa-bag-shopping text-sm"></i>
+                        <span class="absolute -top-2 -right-2 bg-gold text-white text-[8px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="h-[80vh] flex items-center justify-center text-center hero-section">
+        <div class="max-w-3xl px-6 space-y-6">
+            <h1 class="text-4xl md:text-7xl text-white serif-title">The Luminous Heritage</h1>
+            <p class="text-white/80 font-light tracking-widest text-sm uppercase">Handcrafted Excellence Since 1992</p>
+            <div class="pt-6">
+                <a href="#shop" class="inline-block border border-white text-white px-12 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-black transition duration-500">Shop Collection</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Grid -->
+    <section id="shop" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+            <!-- Item 1 -->
+            <div class="product-card group">
+                <div class="relative aspect-[4/5] overflow-hidden bg-gray-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" 
+                         onerror="this.parentElement.classList.add('img-fallback'); this.style.display='none'; this.parentElement.innerHTML='[Image: Necklace]';" 
+                         class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                        <button class="add-to-cart-btn w-full bg-black text-white py-3 text-[9px] uppercase tracking-widest">Quick Add</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-[10px] uppercase font-bold tracking-wider">Morning Dew Pendant</h3>
+                    <p class="gold-accent text-sm mt-1">$2,450.00</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="product-card group">
+                <div class="relative aspect-[4/5] overflow-hidden bg-gray-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=600&q=80" 
+                         onerror="this.parentElement.classList.add('img-fallback'); this.style.display='none'; this.parentElement.innerHTML='[Image: Earrings]';" 
+                         class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                        <button class="add-to-cart-btn w-full bg-black text-white py-3 text-[9px] uppercase tracking-widest">Quick Add</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-[10px] uppercase font-bold tracking-wider">Luna Pearl Studs</h3>
+                    <p class="gold-accent text-sm mt-1">$890.00</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="product-card group">
+                <div class="relative aspect-[4/5] overflow-hidden bg-gray-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=600&q=80" 
+                         onerror="this.parentElement.classList.add('img-fallback'); this.style.display='none'; this.parentElement.innerHTML='[Image: Ring]';" 
+                         class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                        <button class="add-to-cart-btn w-full bg-black text-white py-3 text-[9px] uppercase tracking-widest">Quick Add</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-[10px] uppercase font-bold tracking-wider">Celestial Diamond Band</h3>
+                    <p class="gold-accent text-sm mt-1">$3,200.00</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="product-card group">
+                <div class="relative aspect-[4/5] overflow-hidden bg-gray-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1598560912005-59a0d5c1a572?auto=format&fit=crop&w=600&q=80" 
+                         onerror="this.parentElement.classList.add('img-fallback'); this.style.display='none'; this.parentElement.innerHTML='[Image: Bracelet]';" 
+                         class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                        <button class="add-to-cart-btn w-full bg-black text-white py-3 text-[9px] uppercase tracking-widest">Quick Add</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-[10px] uppercase font-bold tracking-wider">Eternity Cuff</h3>
+                    <p class="gold-accent text-sm mt-1">$1,150.00</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Brand Story Section (Dark) -->
+    <section class="bg-[#1a1a1a] text-white py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center space-y-8">
+            <h2 class="serif-title text-3xl md:text-5xl">Ethically Sourced. <br>Artistically Crafted.</h2>
+            <p class="text-gray-400 font-light leading-relaxed max-w-2xl mx-auto italic">
+                "Our mission is to create timeless beauty that respects the earth. We use only 100% recycled 18K gold and conflict-free diamonds."
+            </p>
+            <div class="pt-4">
+                <a href="#" class="text-gold border-b border-gold pb-1 text-[10px] uppercase tracking-widest hover:text-white hover:border-white transition">The AURA Commitment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#fbfaf8] py-16 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-8">
+            <div class="serif-title text-2xl gold-accent">AURA</div>
+            <div class="flex justify-center space-x-8 text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                <a href="#" class="hover:text-black">Instagram</a>
+                <a href="#" class="hover:text-black">Boutiques</a>
+                <a href="#" class="hover:text-black">Contact</a>
+            </div>
+            <p class="text-[9px] text-gray-400 tracking-widest">© 2024 AURA JEWELRY INTERNATIONAL</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple cart notification
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white px-8 py-3 text-[10px] tracking-widest uppercase z-50';
+                toast.innerText = 'Added to Bag';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2000);
+            });
+        });
+    </script>
+</body>
+</html>
